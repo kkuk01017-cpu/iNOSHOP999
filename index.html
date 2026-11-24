@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iNO Shop - ขายไอดีเกมราคาถูก ปลอดภัย</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#050810',
+                        card: '#0F1A2F',
+                        primary: '#0099FF',
+                        secondary: '#00CCFF',
+                        danger: '#E53935',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap');
+        * { font-family: 'Noto Sans Thai', sans-serif; }
+        body { background: #050810; position: relative; z-index: 1; }
+        
+        .btn-blue { background: linear-gradient(180deg, #0099FF, #0077EE); border: 2px solid #00CCFF; transition: all 0.2s ease; }
+        .btn-blue:hover { background: linear-gradient(180deg, #00AAFF, #0088FF); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 153, 255, 0.4); }
+        .btn-dark { background: #0F1A2F; border: 2px solid #0099FF; transition: all 0.2s ease; }
+        .btn-dark:hover { background: #152540; border-color: #00CCFF; transform: translateY(-2px); }
+        .btn-danger { background: linear-gradient(180deg, #E53935, #C62828); border: 2px solid #EF5350; transition: all 0.2s ease; }
+        .btn-danger:hover { background: linear-gradient(180deg, #EF5350, #E53935); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(229, 57, 53, 0.4); }
+        
+        .card-box { background: #0F1A2F; border: 2px solid #0099FF; transition: all 0.3s ease; }
+        .card-box:hover { border-color: #00CCFF; box-shadow: 0 0 20px rgba(0, 153, 255, 0.15); }
+        .glow-border { box-shadow: 0 0 15px rgba(0, 153, 255, 0.3); }
+        .text-glow { text-shadow: 0 0 10px rgba(0, 204, 255, 0.6); }
+        
+        .stars-bg { position: fixed; inset: 0; overflow: hidden; z-index: -1; background: radial-gradient(ellipse at top, #0A1628 0%, #050810 60%, #000 100%); }
+        .star {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            animation: floatTwinkle linear infinite;
+        }
+        @keyframes floatTwinkle {
+            0%   { opacity: 0.15; transform: translateY(0px) scale(1); }
+            25%  { opacity: 0.7;  transform: translateY(-8px) scale(1.1); }
+            50%  { opacity: 1;    transform: translateY(-15px) scale(1.3); }
+            75%  { opacity: 0.6;  transform: translateY(-7px) scale(1.1); }
+            100% { opacity: 0.15; transform: translateY(0px) scale(1); }
+        }
+        
+        .logo-container { display: flex; align-items: center; gap: 10px; }
+        .logo-text { font-size: 24px; font-weight: 700; background: linear-gradient(90deg, #0099FF, #00CCFF); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        
+        .banner-img { width: 100%; height: 180px; object-fit: cover; border-radius: 0.5rem; }
+    </style>
+</head>
+<body class="text-white min-h-screen">
+
+    <!-- ⭐ พื้นหลังดาว -->
+    <div class="stars-bg">
+        <div class="star" style="width:2px;height:2px;top:10%;left:8%;animation-duration:3s;"></div>
+        <div class="star" style="width:1px;height:1px;top:15%;left:85%;animation-duration:4s;animation-delay:0.3s;"></div>
+        <div class="star" style="width:2px;height:2px;top:25%;left:20%;animation-duration:3.5s;animation-delay:0.6s;"></div>
+        <div class="star" style="width:1px;height:1px;top:30%;left:70%;animation-duration:4.2s;animation-delay:0.9s;"></div>
+        <div class="star" style="width:2px;height:2px;top:42%;left:12%;animation-duration:3.8s;animation-delay:1.2s;"></div>
+        <div class="star" style="width:1px;height:1px;top:50%;left:90%;animation-duration:4.5s;animation-delay:0.1s;"></div>
+        <div class="star" style="width:2px;height:2px;top:60%;left:35%;animation-duration:3.2s;animation-delay:0.4s;"></div>
+        <div class="star" style="width:1px;height:1px;top:70%;left:78%;animation-duration:4.8s;animation-delay:0.7s;"></div>
+        <div class="star" style="width:3px;height:3px;top:78%;left:5%;animation-duration:3.6s;animation-delay:1s;"></div>
+        <div class="star" style="width:1px;height:1px;top:85%;left:55%;animation-duration:4.1s;animation-delay:1.3s;"></div>
+        <div class="star" style="width:2px;height:2px;top:8%;left:45%;animation-duration:3.9s;animation-delay:0.2s;"></div>
+        <div class="star" style="width:2px;height:2px;top:20%;left:60%;animation-duration:3.4s;animation-delay:0.5s;"></div>
+        <div class="star" style="width:1px;height:1px;top:55%;left:82%;animation-duration:4.6s;animation-delay:0.8s;"></div>
+        <div class="star" style="width:2px;height:2px;top:68%;left:25%;animation-duration:3.3s;animation-delay:1.1s;"></div>
+        <div class="star" style="width:1px;height:1px;top:90%;left:15%;animation-duration:4.3s;animation-delay:1.4s;"></div>
+        <div class="star" style="width:2px;height:2px;top:12%;left:55%;animation-duration:3.7s;animation-delay:0.5s;"></div>
+        <div class="star" style="width:1px;height:1px;top:38%;left:42%;animation-duration:4.4s;animation-delay:0.7s;"></div>
+        <div class="star" style="width:3px;height:3px;top:82%;left:68%;animation-duration:3.1s;animation-delay:1s;"></div>
+        <div class="star" style="width:1px;height:1px;top:5%;left:30%;animation-duration:4.7s;animation-delay:0.4s;"></div>
+        <div class="star" style="width:2px;height:2px;top:92%;left:80%;animation-duration:3.8s;animation-delay:1.5s;"></div>
+    </div>
+
+    <!-- ส่วนหัว -->
+    <header class="bg-black/40 backdrop-blur-sm border-b-2 border-primary/40 py-4 relative z-10">
+        <div class="container mx-auto px-4 flex items-center justify-between">
+            <div class="logo-container">
+                <span class="logo-text text-glow">iNO Shop</span>
+            </div>
+            <button id="menuBtn" class="text-2xl text-primary hover:text-secondary transition-colors">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- เมนูมือถือ — ไม่มีลิงก์แอดมินแล้ว -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" id="menuOverlay"></div>
+        <div class="absolute top-0 right-0 w-72 h-full bg-card border-l-2 border-primary p-6 shadow-2xl">
+            <div class="flex justify-between items-center mb-8">
+                <h3 class="text-xl font-bold text-primary">เมนู</h3>
+                <button id="closeMenu" class="text-xl text-gray-400 hover:text-white"><i class="fa fa-times"></i></button>
+            </div>
+            <nav class="space-y-2">
+                <a href="#" class="block py-3 px-3 rounded-lg hover:bg-primary/10">หน้าหลัก</a>
+                <a href="#products" class="block py-3 px-3 rounded-lg hover:bg-primary/10">ร้านค้า</a>
+                <a href="#topup" class="block py-3 px-3 rounded-lg hover:bg-primary/10">เติมเงิน</a>
+                <a href="#game" class="block py-3 px-3 rounded-lg hover:bg-primary/10">เกมสุ่ม</a>
+                <a href="#contact" class="block py-3 px-3 rounded-lg hover:bg-primary/10">ติดต่อเรา</a>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-6 relative z-10">
+
+        <!-- 🖼️ แบนเนอร์โปรโมชั่น -->
+        <section class="mb-8">
+            <img src="https://i.imgur.com/placeholder.jpg" alt="iNO Shop Banner" class="banner-img mb-4">
+            <div class="bg-gradient-to-r from-primary/20 to-secondary/20 rounded-lg p-4 text-center">
+                <p class="text-lg font-semibold">🎉 ยินดีต้อนรับสู่ iNO Shop</p>
+                <p class="text-sm text-gray-400">ร้านค้าปลอดภัย ราคาถูก บริการรวดเร็วตลอด 24 ชม.</p>
+            </div>
+        </section>
+
+        <h2 class="text-center text-gray-400 mb-4">Menu - เมนูต่างๆ</h2>
+        
+        <div class="grid grid-cols-2 gap-4 mb-8">
+            <a href="#" class="btn-blue rounded-lg p-5 flex flex-col items-center justify-center gap-3 glow-border">
+                <i class="fa fa-home text-2xl"></i>
+                <span class="font-bold text-lg">หน้าหลัก</span>
+            </a>
+            <a href="#topup" class="btn-dark rounded-lg p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa fa-credit-card text-2xl text-primary"></i>
+                <span class="font-bold text-lg">เติมเงิน</span>
+            </a>
+            <a href="#products" class="btn-dark rounded-lg p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa fa-shopping-bag text-2xl text-primary"></i>
+                <span class="font-bold text-lg">ร้านค้า</span>
+            </a>
+            <a href="#game" class="btn-dark rounded-lg p-5 flex flex-col items-center justify-center gap-3">
+                <i class="fa fa-dice text-2xl text-primary"></i>
+                <span class="font-bold text-lg">เกมสุ่ม</span>
+            </a>
+        </div>
+        
+        <a href="#contact" class="btn-dark rounded-lg p-4 flex items-center justify-center gap-3 w-full mb-8">
+            <i class="fa fa-comments text-xl text-primary"></i>
+            <span class="font-bold text-lg">ติดต่อเรา</span>
+        </a>
+
+        <!-- ลิงก์ด่วน -->
+        <div class="grid grid-cols-2 gap-4 mb-10">
+            <a href="#" class="card-box rounded-lg p-5 flex flex-col items-center gap-3">
+                <i class="fa fa-file-text text-3xl text-primary"></i>
+                <span class="font-semibold">สมัครสมาชิก</span>
+            </a>
+            <a href="#topup" class="card-box rounded-lg p-5 flex flex-col items-center gap-3">
+                <span class="text-3xl">💳</span>
+                <span class="font-semibold">เติมเงิน</span>
+            </a>
+            <a href="#" class="card-box rounded-lg p-5 flex flex-col items-center gap-3">
+                <i class="fa fa-clock-o text-3xl text-primary"></i>
+                <span class="font-semibold">ประวัติการซื้อ</span>
+            </a>
+            <a href="#contact" class="card-box rounded-lg p-5 flex flex-col items-center gap-3">
+                <i class="fa fa-headphones text-3xl text-primary"></i>
+                <span class="font-semibold">ติดต่อแอดมิน</span>
+            </a>
+        </div>
+
+        <!-- สินค้าแนะนำ -->
+        <section id="products" class="mb-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa fa-fire text-primary"></i> สินค้าแนะนำ
+            </h2>
+            <div class="space-y-4" id="productList">
+                <p class="text-center text-gray-500 py-8">ยังไม่มีสินค้าในตอนนี้</p>
+            </div>
+        </section>
+
+        <!-- เกมสุ่ม -->
+        <section id="game" class="mb-10">
+            <h2 class="text-xl font-bold mb-1 flex items-center gap-2">
+                <i class="fa fa-gift text-primary"></i> เกมสุ่มรางวัล
+            </h2>
+            <p class="text-gray-400 text-sm mb-4">Lucky Game</p>
+            <div class="card-box rounded-lg overflow-hidden glow-border">
+                <div class="h-40 bg-gradient-to-r from-primary/30 to-secondary/30 flex items-center justify-center">
+                    <span class="text-6xl">🎡</span>
+                </div>
+                <div class="p-4">
+                    <h3 class="font-bold text-lg">วงล้อสุ่มไอดี</h3>
+                    <p class="text-sm text-gray-400 mb-3">สุ่มไอดีราคาพิเศษ ลุ้นไอดีแรร์!</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-primary font-bold text-lg">฿39.00</span>
+                        <button class="btn-blue px-5 py-2 rounded font-semibold">เล่นเลย</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- เติมเงิน -->
+        <section id="topup" class="mb-10">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa fa-credit-card text-primary"></i> เติมเงิน
+            </h2>
+            <div class="space-y-4">
+                <div class="card-box rounded-lg p-4 glow-border">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl">💚</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold">TrueMoney</h3>
+                            <p class="text-sm text-gray-400">ส่งซองอั่งเปาให้แอดมิน - ขั้นต่ำ 10 บาท</p>
+                        </div>
+                        <button class="btn-blue px-4 py-2 rounded font-semibold">แจ้งเติม</button>
+                    </div>
+                </div>
+                <div class="card-box rounded-lg p-4 glow-border">
+                    <div class="flex items-center gap-4">
+                        <span class="text-3xl">💰</span>
+                        <div class="flex-1">
+                            <h3 class="font-bold">PromptPay</h3>
+                            <p class="text-sm text-gray-400">โอนและแจ้งหลักฐานให้แอดมิน</p>
+                        </div>
+                        <button class="btn-blue px-4 py-2 rounded font-semibold">แจ้งโอน</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ติดต่อเรา -->
+        <section id="contact" class="mb-12">
+            <h2 class="text-xl font-bold mb-4 flex items-center gap-2">
+                <i class="fa fa-headphones text-primary"></i> ติดต่อเรา
+            </h2>
+            <div class="card-box rounded-lg p-6 glow-border">
+                <p class="text-center mb-4">มีปัญหา? ติดต่อแอดมินได้ตลอด 24 ชม.</p>
+                <div class="space-y-3">
+                    <p class="flex items-center gap-3"><i class="fa fa-line-chat text-green-400 text-lg"></i> Line ID: <span class="text-primary">@inoshop</span></p>
+                    <p class="flex items-center gap-3"><i class="fa fa-facebook-square text-blue-400 text-lg"></i> Facebook: <span class="text-primary">iNO Shop</span></p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ท้ายเว็บ -->
+    <footer class="border-t-2 border-primary/30 py-6 text-center relative z-10">
+        <p class="text-primary font-bold text-lg">iNO Shop</p>
+        <p class="text-gray-500 text-sm mt-2">© 2026 iNO Shop. สงวนลิขสิทธิ์ทั้งหมด</p>
+    </footer>
+
+    <script>
+        // เมนูมือถือ
+        const menuBtn = document.getElementById('
